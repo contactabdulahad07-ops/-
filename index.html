@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise | Falak</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Scene 1: Password -->
+    <div class="screen active" id="screen1">
+        <div class="password-box">
+            <div class="icon"><i class="fas fa-lock"></i></div>
+            <h2>Private Birthday Surprise <i class="fas fa-heart"></i></h2>
+            <p>Enter Password to Continue</p>
+            <input type="password" id="password" placeholder="Enter Password">
+            <button id="unlockBtn">Unlock</button>
+            <p id="errorMsg" style="display:none; color: #ff4e92;">Wrong password! :(</p>
+            <p class="hint">Shhh... it's a surprise <i class="fas fa-heart"></i></p>
+        </div>
+    </div>
+
+    <!-- Scene 2: Welcome -->
+    <div class="screen" id="screen2">
+        <div class="welcome-content">
+            <h1 class="dancing-font">Happy Birthday <br> Falak <i class="fas fa-heart"></i></h1>
+            <div class="teddy-container">
+                <div class="teddy">
+                    <img src="https://i.imgur.com/8km9tlL.png" alt="Teddy">
+                    <div class="name-tag">Me</div>
+                </div>
+                <img src="https://i.imgur.com/SeJooQW.png" class="main-cake" alt="Cake">
+                <div class="teddy">
+                    <img src="https://i.imgur.com/42Qs3zd.png" alt="Teddy">
+                    <div class="name-tag">Falak</div>
+                </div>
+            </div>
+            <button class="nextBtn" onclick="nextScreen(2)">Open Surprise <i class="fas fa-heart"></i></button>
+        </div>
+    </div>
+
+    <!-- Scene 3: Heart Game -->
+    <div class="screen" id="screen3">
+        <div class="game-container">
+            <h3>Collect 10 Hearts for you <i class="fas fa-heart"></i></h3>
+            <div class="score-board"><span id="score">0</span> / 10</div>
+            <div id="hearts-container"></div>
+        </div>
+    </div>
+
+    <!-- Scene 4: Cake Cutting -->
+    <div class="screen" id="screen4">
+        <div class="cake-cutting-container">
+            <h1 class="dancing-font">Cake Cutting</h1>
+            <img src="https://i.imgur.com/SeJooQW.png" alt="Cake" class="large-cake">
+            <button class="nextBtn" onclick="nextScreen(4)">Cut Cake <i class="fas fa-cake-candles"></i></button>
+        </div>
+    </div>
+
+    <!-- Scene 5: Promise -->
+    <div class="screen" id="screen5">
+        <div class="promise-box">
+            <div class="heart-outline">
+                <p>Promise me <br> you'll always keep smiling <br> and stay happy.</p>
+            </div>
+            <button class="nextBtn" onclick="nextScreen(5)">I Promise <i class="fas fa-hand-holding-heart"></i></button>
+        </div>
+    </div>
+
+    <!-- Scene 6: I Love You -->
+    <div class="screen" id="screen6">
+        <div class="love-container">
+            <h1 class="dancing-font">I LOVE YOU <i class="far fa-heart"></i></h1>
+            <h2 class="dancing-font">Happy Birthday Falak <i class="fas fa-heart"></i></h2>
+            <button class="nextBtn" onclick="nextScreen(6)">Read My Letter <i class="fas fa-envelope-open-text"></i></button>
+        </div>
+    </div>
+
+    <!-- Scene 7: Love Letter -->
+    <div class="screen" id="screen7">
+        <div class="letter-paper">
+            <h2 class="dancing-font">My Love Letter <i class="fas fa-heart"></i></h2>
+            <ol>
+                <li>Happy Birthday Meri Jaan ❤️</li>
+                <li>You are the most beautiful part of my life.</li>
+                <li>Your smile makes my world beautiful.</li>
+                <li>I pray Allah always keeps you happy.</li>
+                <li>You are my biggest blessing.</li>
+                <li>Thank you for being in my life.</li>
+                <li>I will always respect and care for you.</li>
+                <li>May all your dreams come true.</li>
+                <li>I wish every happiness for you.</li>
+                <li>I love you more every day.</li>
+                <li>You are my forever. ❤️</li>
+                <li>You mean everything to me.</li>
+                <li>Every moment with you is special.</li>
+                <li>I can't imagine my life without you.</li>
+                <li>Happy Birthday My Love ❤️</li>
+            </ol>
+            <h3 class="dancing-font">Forever Yours ❤️</h3>
+            <button class="nextBtn" onclick="nextScreen(7)">See Surprise <i class="fas fa-gift"></i></button>
+        </div>
+    </div>
+
+    <!-- Scene 8: Final Celebration -->
+    <div class="screen" id="screen8">
+        <div class="final-container">
+            <h2 class="dancing-font">You Just Made My Day So Special ❤️</h2>
+            <h1 class="dancing-font">Happy Birthday <br> My Love Falak ❤️</h1>
+            <div class="teddy-container">
+                <img src="https://i.imgur.com/8km9tlL.png" alt="Teddy">
+                <img src="https://i.imgur.com/42Qs3zd.png" alt="Teddy">
+            </div>
+            <button class="nextBtn" onclick="location.reload()">Play Again <i class="fas fa-redo"></i></button>
+        </div>
+        <div class="fireworks"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+              </html>
