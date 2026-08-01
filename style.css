@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.dancing-font {
+    font-family: 'Dancing Script', cursive;
+}
+
+.screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff4e92, #ffb4c1);
+    animation: fade 1s ease forwards;
+}
+
+.screen.active {
+    display: flex;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Glassmorphism Box */
+.password-box, .welcome-content, .promise-box, .letter-paper, .final-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: white;
+    max-width: 500px;
+    width: 90%;
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+button {
+    background: #ff4e92;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #ff2d7a;
+}
+
+/* Teddy & Cake layout */
+.teddy-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.teddy img {
+    width: 80px;
+}
+
+.main-cake, .large-cake {
+    width: 150px;
+}
+
+/* Heart Game Styles */
+.falling-heart {
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}
+
+/* Heart Outline for Promise */
+.heart-outline {
+    border: 4px solid #fff;
+    padding: 40px;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    margin-bottom: 20px;
+}
+
+/* Letter Styles */
+.letter-paper {
+    text-align: left;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.letter-paper ol {
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+          }
